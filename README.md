@@ -145,4 +145,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits
 
-This portfolio template was created by [Lakshmikanth Karur Rajamani](https://github.com/krlakshmikanth). Feel free to fork and customize it for your own use! 
+This portfolio template was created by [Lakshmikanth Karur Rajamani](https://github.com/krlakshmikanth). 
+Feel free to fork and customize it for your own use! 
