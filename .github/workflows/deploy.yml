@@ -21,21 +21,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Replace Analytics IDs
+      - name: Validate Analytics IDs
         env:
           CLARITY_ID: ${{ secrets.CLARITY_ID }}
           GA_ID: ${{ secrets.GA_MEASUREMENT_ID }}
         run: |
-          # Verify secrets are available
+          # Verify secrets are available and properly formatted
           if [ -z "$CLARITY_ID" ]; then
             echo "Error: CLARITY_ID is not set"
             exit 1
           fi
+          
           if [ -z "$GA_ID" ]; then
             echo "Error: GA_MEASUREMENT_ID is not set"
             exit 1
           fi
           
+          # Verify GA_ID format (should start with G-)
+          if [[ ! "$GA_ID" =~ ^G-[A-Za-z0-9]+$ ]]; then
+            echo "Error: GA_MEASUREMENT_ID should start with 'G-' followed by alphanumeric characters"
+            exit 1
+          fi
+          
+          echo "Analytics IDs validated successfully"
+
+      - name: Replace Analytics IDs
+        env:
+          CLARITY_ID: ${{ secrets.CLARITY_ID }}
+          GA_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+        run: |
           # Replace the placeholders
           sed -i "s|__CLARITY_ID__|${CLARITY_ID}|g" config.js
           sed -i "s|__GA_ID__|${GA_ID}|g" config.js
@@ -50,6 +64,10 @@ jobs:
             echo "Error: GA_ID was not replaced"
             exit 1
           fi
+          
+          # Print first few characters of IDs for verification (safely)
+          echo "CLARITY_ID prefix: ${CLARITY_ID:0:4}..."
+          echo "GA_ID prefix: ${GA_ID:0:4}..."
           echo "Replacements verified successfully"
 
       - name: Setup Pages
@@ -60,4 +78,10 @@ jobs:
         with:
           folder: .
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages 
+          branch: gh-pages
+          
+      - name: Verify Deployment
+        run: |
+          echo "Deployment completed. Please verify analytics at:"
+          echo "Microsoft Clarity: https://clarity.microsoft.com/"
+          echo "Google Analytics: https://analytics.google.com/" 
