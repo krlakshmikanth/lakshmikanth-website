@@ -76,6 +76,7 @@ Modify the contact links section in the HTML:
 <div class="contact-links">
     <a href="mailto:your.email@example.com">✉ Email</a>
     <a href="https://www.linkedin.com/in/your-profile" target="_blank">🔗 LinkedIn</a>
+    <a href="https://blog.krlakshmikanth.com/" target="_blank">📝 Blog</a>
     <!-- Add more social links as needed -->
 </div>
 ```
