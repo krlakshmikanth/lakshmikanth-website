@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A modern, interactive portfolio website with a terminal-inspired design. Built with HTML, CSS, and vanilla JavaScript, this website features a unique terminal-style interface that displays professional information in an engaging way.",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "terminal",
+    "website",
+    "template"
+  ],
+  "author": "Lakshmikanth Karur Rajamani",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krlakshmikanth/lakshmikanth-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krlakshmikanth/lakshmikanth-website/issues"
+  },
+  "homepage": "https://github.com/krlakshmikanth/lakshmikanth-website#readme"
+}

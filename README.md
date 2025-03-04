@@ -26,6 +26,7 @@ cd your-name-website
 - 📱 Mobile-friendly layout
 - 🔗 Social media integration
 - 📧 Contact information display
+- 📊 Analytics integration (Google Analytics & Microsoft Clarity)
 
 ## Technologies Used
 
@@ -33,6 +34,9 @@ cd your-name-website
 - CSS3 (with modern features like CSS Variables and Animations)
 - Vanilla JavaScript
 - Google Fonts (Roboto and Roboto Mono)
+- Google Analytics
+- Microsoft Clarity
+- GitHub Actions for CI/CD
 
 ## Customization Guide
 
@@ -80,6 +84,48 @@ Modify the contact links section in the HTML:
     <!-- Add more social links as needed -->
 </div>
 ```
+
+### 4. Set Up Analytics
+To enable analytics tracking:
+
+1. Get your tracking IDs:
+   - Google Analytics: Create a property in Google Analytics 4 and get your Measurement ID
+   - Microsoft Clarity: Create a project in Clarity and get your Project ID
+
+2. Add GitHub Secrets:
+   - Go to your repository settings
+   - Navigate to Secrets and Variables > Actions
+   - Add two new secrets:
+     - `CLARITY_ID`: Your Microsoft Clarity project ID
+     - `GA_MEASUREMENT_ID`: Your Google Analytics Measurement ID
+
+3. The GitHub Actions workflow will automatically inject these IDs during build.
+
+### 5. Set Up Favicon and Social Share Images
+
+1. Create an `assets` directory in your project root:
+```bash
+mkdir assets
+```
+
+2. Generate favicon files:
+   - Create a 512x512 PNG image with your initials (e.g., "LK")
+   - Use a favicon generator (like [Favicon Generator](https://favicon.io/favicon-generator/))
+   - Place the generated files in the `assets` directory:
+     - favicon-16x16.png
+     - favicon-32x32.png
+     - apple-touch-icon.png
+     - android-chrome-192x192.png
+     - android-chrome-512x512.png
+
+3. Create social share image:
+   - Create a 1200x630 PNG image for social media sharing
+   - Include your name, title, and a professional background
+   - Save as `social-share.png` in the `assets` directory
+
+4. Update the URLs in `index.html`:
+   - Replace `krlakshmikanth.github.io/lakshmikanth-website` with your actual domain
+   - Update the image paths if you use different filenames
 
 ## Browser Support
 
