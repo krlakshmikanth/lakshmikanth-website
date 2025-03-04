@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Lakshmikanth Karur Rajamani - Cloud AI & Engineering Consultant</title>
+    <meta name="title" content="Lakshmikanth Karur Rajamani - Cloud AI & Engineering">
+    <meta name="description" content="Accomplished technologist with over a decade of expertise in cloud computing, AI, and data engineering. Founder of Cloudlagom, specialising in innovative solutions to optimise cloud economics at scale.">
+    <meta name="keywords" content="Cloud Computing, AI, Data Engineering, Cloud Economics, B2SMB, Cloudlagom, Lakshmikanth Rajamani">
+    <meta name="author" content="Lakshmikanth Karur Rajamani">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krlakshmikanth.github.io/lakshmikanth-website/">
+    <meta property="og:title" content="Lakshmikanth Karur Rajamani - Cloud AI & Engineering">
+    <meta property="og:description" content="Accomplished technologist with over a decade of expertise in cloud computing, AI, and data engineering. Founder of Cloudlagom, specialising in innovative solutions to optimise cloud economics at scale.">
+    <meta property="og:image" content="https://krlakshmikanth.github.io/lakshmikanth-website/assets/social-share.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://krlakshmikanth.github.io/lakshmikanth-website/">
+    <meta property="twitter:title" content="Lakshmikanth Karur Rajamani - Cloud AI & Engineering">
+    <meta property="twitter:description" content="Accomplished technologist with over a decade of expertise in cloud computing, AI, and data engineering. Founder of Cloudlagom, specialising in innovative solutions to optimise cloud economics at scale.">
+    <meta property="twitter:image" content="https://krlakshmikanth.github.io/lakshmikanth-website/assets/social-share.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "CLARITY_ID");
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --accent-color: #4CAF50;
+            --terminal-green: #00ff00;
+            --terminal-blue: #87CEFA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes cursor-blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes terminal-startup {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glitch-text {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .terminal-container {
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Roboto Mono', monospace;
+            box-shadow: 0 10px 30px rgba(0,255,0,0.2);
+            border: 2px solid var(--terminal-green);
+            position: relative;
+            overflow: hidden;
+            animation: terminal-startup 1s ease-out;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+
+        .terminal-container:hover {
+            transform: rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 40px rgba(0,255,0,0.3);
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--terminal-green);
+            position: relative;
+        }
+
+        .terminal-header::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--terminal-green), transparent);
+        }
+
+        .terminal-content {
+            white-space: pre-wrap;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--terminal-green);
+            animation: cursor-blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        .username {
+            color: var(--terminal-green);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0,255,0,0.7);
+        }
+
+        .prompt {
+            color: var(--accent-color);
+        }
+
+        .section-title {
+            color: var(--terminal-blue);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::before {
+            content: '> ';
+            color: var(--terminal-green);
+        }
+
+        .section-title:hover {
+            animation: glitch-text 2s infinite;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .contact-links a {
+            color: var(--terminal-green);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+            background: linear-gradient(45deg, transparent, rgba(0,255,0,0.1));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .contact-links a:hover::before {
+            left: 100%;
+        }
+
+        .contact-links a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0,255,0,0.5);
+        }
+
+        .experience-item {
+            position: relative;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-left: 2px solid var(--terminal-green);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background-color: rgba(0,255,0,0.05);
+            border-left-width: 5px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .terminal-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <span>bash - terminal</span>
+            <span>~</span>
+        </div>
+        <div class="terminal-content" id="terminal-text">
+<span class="username">lakshmikanth@cloud-innovator</span>:<span class="prompt">~$</span> cat profile.txt<span class="cursor"></span>
+        </div>
+    </div>
+
+    <div class="contact-links">
+        <a href="mailto:lakshmikanthrajamani@gmail.com">✉ Email</a>
+        <a href="https://www.linkedin.com/in/krlakshmikanth" target="_blank">🔗 LinkedIn</a>
+        <a href="https://blog.krlakshmikanth.com/" target="_blank">📝 Blog</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const terminalText = document.getElementById('terminal-text');
+            const fullProfile = `
+Lakshmikanth Karur Rajamani
+Building AI agents to streamline cloud economics for B2SMBs
+London Area, United Kingdom
+
+## Summary
+
+Accomplished technologist with over a decade of expertise in cloud computing, AI, and data engineering. Founder of Cloudlagom, specialising in innovative solutions to optimise cloud economics at scale. Proven ability to deliver transformative outcomes, driving efficiency, cost optimisation, and industry-leading innovation.
+
+## Experience
+
+# Cloudlagom
+Founder and Engineer | August 2024 - Present (8 months)
+London Area, United Kingdom
+- Developing AI agents to optimise cloud economics for small and medium-sized businesses (B2SMBs)
+
+# Greeting Cards for you
+Creator | December 2024 - Present (4 months)
+London Area, United Kingdom
+- Creator of greetingcardsforyou.com, a sustainable and user-friendly platform for personalised digital greeting cards, spreading smiles one card at a time
+
+# Knowit
+Principal Consultant - AI Advisory, Google Cloud Partnership and Presales  
+June 2022 - July 2024 (2 years 2 months)
+London Area, United Kingdom
+- Architected cloud solutions for data optimization
+- Achievements:
+  * Streamlined autonomous transport data processes (30% friction reduction)
+  * Cost-effective cloud migrations (48% savings)
+  * Secure key management (85% PII incident reduction)
+  * AI-powered sales automation (90% productivity boost)
+- Led collaborative innovation within Knowit's GEEK initiative for Google business development
+
+# Tata Consultancy Services
+Cloud Architecture Consultant | July 2021 - June 2022 (1 year)
+Stockholm, Stockholm County, Sweden
+- Designed scalable recommendation engine and digital wardrobe feature using Terraform IaC on GCP and Azure
+- Utilized Databricks to optimize data processing pipelines
+- Resulted in 12% increase in online sales and 15% higher user engagement
+
+Senior Data Scientist | August 2017 - June 2021 (3 years 11 months)
+Chennai, Tamil Nadu, India
+- Led development of MFDM™ AI suite
+- Revolutionized machine learning processes through automation of feature engineering, model selection, and deployment
+
+# Freezon Labs
+Founding Engineer | July 2013 - August 2017 (4 years 2 months)
+Chennai, Tamil Nadu, India
+- Developed document analytics suite
+- Contributed to 60% increase in annual revenue
+- Acquired 20 new clients in the first year
+
+## Education
+- Indian School of Business: Certification in Business Analytics
+- Anna University Chennai: Bachelor of Engineering - BE, Computer Science and Engineering
+- Harvard Business School Online: Executive Education Programme in Entrepreneurship and Business Leadership
+`;
+
+            function typeWriter(text, element, index = 0) {
+                if (index < text.length) {
+                    element.innerHTML = text.substring(0, index + 1) + '<span class="cursor"></span>';
+                    setTimeout(() => {
+                        typeWriter(text, element, index + 1);
+                    }, 20);
+                }
+            }
+
+            // Delayed typing effect
+            setTimeout(() => {
+                typeWriter(fullProfile, terminalText);
+            }, 1500);
+
+            // Add hover interactions to sections
+            const sections = document.querySelectorAll('.section-title');
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', (e) => {
+                    e.target.style.color = 'var(--terminal-blue)';
+                });
+                section.addEventListener('mouseleave', (e) => {
+                    e.target.style.color = 'var(--terminal-blue)';
+                });
+            });
+        });
+    </script>
+    <script src="config.js"></script>
+</body>
+</html>
