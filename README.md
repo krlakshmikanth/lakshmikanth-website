@@ -5,16 +5,17 @@ A modern, interactive portfolio website with a terminal-inspired design. Built w
 ## Quick Start
 
 1. Fork this repository by clicking the "Fork" button at the top right of this page
-2. Clone your forked repository:
+2. Rename your forked repository to `your-name-website` (e.g., `john-doe-website`)
+3. Clone your forked repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/personal-website.git
+git clone https://github.com/YOUR_USERNAME/your-name-website.git
 ```
-3. Navigate to the project directory:
+4. Navigate to the project directory:
 ```bash
-cd personal-website
+cd your-name-website
 ```
-4. Open `index.html` in your web browser
-5. Customize the content and styling as described below
+5. Open `index.html` in your web browser
+6. Customize the content and styling as described below
 
 ## Features
 
